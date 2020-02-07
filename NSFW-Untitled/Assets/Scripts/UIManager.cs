@@ -50,43 +50,50 @@ public class UIManager : MonoBehaviour
 
     public void AddPlayer2()
     {
+        Player2.gameObject.SetActive(true);
+        Add_Player2Button.gameObject.SetActive(false);
         Add_Player3Button.gameObject.SetActive(true);
         Minus_Player2Button.gameObject.SetActive(true);
-        Player2.gameObject.SetActive(true);
     }
 
     public void MinusPlayer2()
     {
         Player2.gameObject.SetActive(false);
+        Add_Player2Button.gameObject.SetActive(true);
         Add_Player3Button.gameObject.SetActive(false);
-        Player2.text = "";
         Minus_Player2Button.gameObject.SetActive(false);
-
     }
     
     public void AddPlayer3()
     {
-        Add_Player4Button.gameObject.SetActive(true);
-        Minus_Player3Button.gameObject.SetActive(true);
         Player3.gameObject.SetActive(true);
+        Add_Player3Button.gameObject.SetActive(false);
+        Add_Player4Button.gameObject.SetActive(true);
+        Minus_Player2Button.gameObject.SetActive(false);
+        Minus_Player3Button.gameObject.SetActive(true);
     }
     public void MinusPlayer3()
     {
-        Minus_Player3Button.gameObject.SetActive(false);
         Player3.gameObject.SetActive(false);
-        Player3.text = "";
+        Minus_Player3Button.gameObject.SetActive(false);
+        Minus_Player2Button.gameObject.SetActive(true);
+        Add_Player4Button.gameObject.SetActive(false);
+        Add_Player3Button.gameObject.SetActive(true);
     }
     
     public void AddPlayer4()
     {
-        Minus_Player4Button.gameObject.SetActive(true);
         Player4.gameObject.SetActive(true);
+        Minus_Player4Button.gameObject.SetActive(true);
+        Add_Player4Button.gameObject.SetActive(false);
+        Minus_Player3Button.gameObject.SetActive(false);
     }
     public void MinusPlayer4()
     {
-        Minus_Player4Button.gameObject.SetActive(false);
         Player4.gameObject.SetActive(false);
-        Player2.text = "";
+        Minus_Player4Button.gameObject.SetActive(false);
+        Add_Player4Button.gameObject.SetActive(true);
+        Minus_Player3Button.gameObject.SetActive(true);
     }
 
 
