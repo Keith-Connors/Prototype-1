@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Button = UnityEngine.UI.Button;
 
 //[RequireComponent(typeof(GameManager))]
 public class UIManager : MonoBehaviour
@@ -10,15 +12,22 @@ public class UIManager : MonoBehaviour
     private GameManager m_GameManager;
     private Container m_Container;
     public Canvas IntroCanvas;//, MainScreenCanvas;
+    
 
     public InputField Player1, Player2, Player3, Player4;
     public Button Add_Player2Button, Add_Player3Button, Add_Player4Button;
     public Button Minus_Player2Button, Minus_Player3Button, Minus_Player4Button;
 
+    public GameObject InformationPanel;
     private void Start()
     {
+        
+        
         IntroCanvas = GameObject.Find("Intro-Canvas").GetComponent<Canvas>();
         m_Container = GameObject.Find("Container").GetComponent<Container>();
+
+        InformationPanel = GameObject.Find("Information-Panel");
+        InformationPanel.gameObject.SetActive(false);
         
         Player1 = GameObject.Find("Player_Name-1").GetComponent<InputField>();
         Player2 = GameObject.Find("Player_Name-2").GetComponent<InputField>();
